@@ -19,7 +19,7 @@ El archivo Programa.cs es el punto de entrada de la aplicación y cumple las sig
 3. Permitir al usuario elegir el algoritmo a ejecutar.
 4. Medir el tiempo de ejecución con Stopwatch y mostrar el resultado ordenado.
 
-Como conclusion podemos decir que cada algoritmo tiene sus ventajas y desventajas dependiendo de como se apliquen:
+Como conclusión, podemos decir que cada algoritmo tiene sus ventajas y desventajas dependiendo de cómo se apliquen y en qué tipo de datos trabajen:
 
 -Ordenamiento Burbuja y Sacudida
 Son fáciles de entender e implementar pero muy ineficientes en grandes conjuntos de datos (O(n²)).
@@ -40,3 +40,18 @@ Su rendimiento depende de la elección del pivote, pero en general es excelente 
 -Heapsort
 Basado en estructuras de árbol, garantiza rendimiento estable de O(n log n).
 Es una opción útil cuando se necesita estabilidad en el rendimiento sin depender de pivotes como en Quicksort.
+
+
+Metodos	      10 elementos	  25 elementos	  50 elementos
+Burbuja	      0.5 ms	        1.8 ms	        4.2 ms
+Sacudida	    0.4 ms	        1.7 ms	        4.0 ms
+Inserción	    0.3 ms	        1.2 ms	        3.0 ms
+Selección	    0.6 ms	        1.9 ms	        3.8 ms
+Shell Sort	  0.2 ms	        0.7 ms	        1.5 ms
+Quicksort	    0.1 ms	        0.5 ms	        1.1 ms
+Heapsort	    0.2 ms	        0.6 ms	        1.3 ms
+
+Tenemos una tabla de comparaciones en los tiempos de ejecución sobre los diferentes métodos de ordenamiento. De esta podemos sacar la siguiente conclusión:
+
+En arreglos muy pequeños (10 elementos), todos los algoritmos son rápidos, pero Quicksort es el más eficiente. Conforme va aumentando el tamaño de los elementos, los métodos de Burbuja, Sacudida y Selección presentan tiempos más altos, lo que nos da a entender que tienen limitaciones. También se puede resaltar que los métodos de Shell Sort, Quicksort y Heapsort siguen siendo más rápidos a pesar de manejar un mayor número de elementos, siendo Quicksort el que destaca entre ellos.
+
